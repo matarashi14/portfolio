@@ -4,51 +4,16 @@
 
 @media screen and (max-width: 62em) {
   .portfolio {
+    overflow-y: auto !important;
     .portfolio-items {
       flex-direction: column;
+      padding-bottom: 8rem;
       .portfolio-item {
-        border: none;
-        height: auto;
-        width: 90% !important;
-        border-radius: 9px;
-        cursor: pointer;
-        margin: 1.6rem;
-        transition: all 0.3s ease-in-out;
-        opacity: 1;
-        position: relative;
-        img {
-          object-fit: cover;
-          width: 100%;
-          height: inherit;
-          border-radius: 1rem;
-        }
-
-        .icon {
-          transition: all 0.3s ease-in-out;
-          position: absolute;
-          border-radius: 50%;
-          display: block;
-          bottom: 2.8rem;
-          left: 2rem;
-          width: 2.4rem;
-          height: 2.4rem;
-          i {
-            font-size: 3.2rem;
-          }
-        }
+        height: 45vh;
+        width: 96%;
+        margin: 2rem 0;
       }
-
       .active-portfolio {
-        flex: 1;
-        .icon {
-          bottom: 2.8rem;
-          left: 2rem;
-          width: 2.4rem;
-          height: 2.4rem;
-          i {
-            font-size: 3.2rem;
-          }
-        }
       }
     }
   }
@@ -75,6 +40,18 @@
   html {
     font-size: 56.25%;
   }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .header-container {
+      .header-content {
+        width: 100%;
+        margin: 0 !important;
+      }
+    }
+  }
 }
 
 //**********************************
@@ -88,18 +65,5 @@
 
   section {
     padding: 2.4rem 6rem;
-  }
-
-  .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    .header-container {
-      .header-content {
-        width: 100%;
-        margin: 0 !important;
-      }
-    }
   }
 }
