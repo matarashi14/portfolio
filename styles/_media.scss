@@ -49,6 +49,9 @@
       .header-content {
         width: 100%;
         margin: 0 !important;
+        .name {
+          font-size: 4rem;
+        }
       }
     }
   }
@@ -64,6 +67,26 @@
   }
 
   section {
-    padding: 2.4rem 6rem;
+    padding: 2.4rem 4rem;
+  }
+
+  .header {
+    .header-container {
+      text-align: center;
+      .header-content {
+        .name {
+          font-size: 3.2rem;
+          margin-bottom: 0 !important;
+        }
+
+        .under-name {
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .contact-form {
+    padding: 2.4rem 8rem;
   }
 }
