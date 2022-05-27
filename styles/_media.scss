@@ -1,0 +1,105 @@
+//**********************************
+// 992px (62em * 16px)
+//*********************************
+
+@media screen and (max-width: 62em) {
+  .portfolio {
+    .portfolio-items {
+      flex-direction: column;
+      .portfolio-item {
+        border: none;
+        height: auto;
+        width: 90% !important;
+        border-radius: 9px;
+        cursor: pointer;
+        margin: 1.6rem;
+        transition: all 0.3s ease-in-out;
+        opacity: 1;
+        position: relative;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: inherit;
+          border-radius: 1rem;
+        }
+
+        .icon {
+          transition: all 0.3s ease-in-out;
+          position: absolute;
+          border-radius: 50%;
+          display: block;
+          bottom: 2.8rem;
+          left: 2rem;
+          width: 2.4rem;
+          height: 2.4rem;
+          i {
+            font-size: 3.2rem;
+          }
+        }
+      }
+
+      .active-portfolio {
+        flex: 1;
+        .icon {
+          bottom: 2.8rem;
+          left: 2rem;
+          width: 2.4rem;
+          height: 2.4rem;
+          i {
+            font-size: 3.2rem;
+          }
+        }
+      }
+    }
+  }
+  .controls {
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    justify-content: center;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-gray-5);
+    .control {
+      margin: 1.2rem 1.6rem;
+    }
+  }
+}
+
+//**********************************
+// 752px (47em * 16px)
+//*********************************
+
+@media screen and (max-width: 47em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+//**********************************
+// 416px (26em * 16px)
+//*********************************
+
+@media screen and (max-width: 26em) {
+  html {
+    font-size: 50%;
+  }
+
+  section {
+    padding: 2.4rem 6rem;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    .header-container {
+      .header-content {
+        width: 100%;
+        margin: 0 !important;
+      }
+    }
+  }
+}

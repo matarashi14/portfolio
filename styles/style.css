@@ -46,7 +46,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3.2rem 16rem;
+  padding: 3.2rem 10rem;
 }
 
 .section {
@@ -57,7 +57,9 @@ section {
 }
 
 .sec {
-  display: none;
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   -webkit-transform: translateY(0) scale(1);
           transform: translateY(0) scale(1);
 }
@@ -67,7 +69,9 @@ section {
 }
 
 .active {
-  display: block;
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
   -webkit-animation: scaleAnim 1s ease-in-out;
           animation: scaleAnim 1s ease-in-out;
 }
@@ -181,7 +185,7 @@ section {
   }
 }
 
-.header .header-containor {
+.header .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -193,30 +197,30 @@ section {
           align-items: center;
 }
 
-.header .header-containor .header-content {
+.header .header-container .header-content {
   width: 60%;
   margin-left: 25%;
   margin-top: 25%;
 }
 
-.header .header-containor .header-content .name {
+.header .header-container .header-content .name {
   font-size: 4.4rem;
   font-weight: 700;
   margin-bottom: -0.6rem;
 }
 
-.header .header-containor .header-content .name span {
+.header .header-container .header-content .name span {
   color: var(--color-secondary);
 }
 
-.header .header-containor .header-content .under-name {
+.header .header-container .header-content .under-name {
   font-size: 2.4rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
   color: var(--color-gray-4);
 }
 
-.header .header-containor .header-content .header-discription {
+.header .header-container .header-content .header-discription {
   line-height: 1.5;
 }
 
@@ -308,6 +312,10 @@ section {
   }
 }
 
+.portfolio {
+  width: 100%;
+}
+
 .portfolio .portfolio-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -318,6 +326,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 4rem 0;
 }
 
 .portfolio .portfolio-items .portfolio-item {
@@ -350,9 +359,9 @@ section {
 }
 
 .portfolio .portfolio-items .active-portfolio {
-  -webkit-box-flex: 4;
-      -ms-flex: 4;
-          flex: 4;
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
   opacity: 1;
 }
 
@@ -530,5 +539,111 @@ section {
   font-size: 2rem;
   color: var(--color-black);
   pointer-events: none;
+}
+
+@media screen and (max-width: 62em) {
+  .portfolio .portfolio-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .portfolio .portfolio-items .portfolio-item {
+    border: none;
+    height: auto;
+    width: 90% !important;
+    border-radius: 9px;
+    cursor: pointer;
+    margin: 1.6rem;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    opacity: 1;
+    position: relative;
+  }
+  .portfolio .portfolio-items .portfolio-item img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: inherit;
+    border-radius: 1rem;
+  }
+  .portfolio .portfolio-items .portfolio-item .icon {
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    border-radius: 50%;
+    display: block;
+    bottom: 2.8rem;
+    left: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .portfolio .portfolio-items .portfolio-item .icon i {
+    font-size: 3.2rem;
+  }
+  .portfolio .portfolio-items .active-portfolio {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .portfolio .portfolio-items .active-portfolio .icon {
+    bottom: 2.8rem;
+    left: 2rem;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  .portfolio .portfolio-items .active-portfolio .icon i {
+    font-size: 3.2rem;
+  }
+  .controls {
+    top: auto;
+    bottom: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    width: 100%;
+    background-color: var(--color-gray-5);
+  }
+  .controls .control {
+    margin: 1.2rem 1.6rem;
+  }
+}
+
+@media screen and (max-width: 47em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media screen and (max-width: 26em) {
+  html {
+    font-size: 50%;
+  }
+  section {
+    padding: 2.4rem 6rem;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow: hidden;
+  }
+  .header .header-container .header-content {
+    width: 100%;
+    margin: 0 !important;
+  }
 }
 /*# sourceMappingURL=style.css.map */
