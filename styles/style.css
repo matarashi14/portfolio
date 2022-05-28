@@ -483,6 +483,7 @@ section {
 .contact-form .btn {
   background-color: var(--color-secondary);
   cursor: pointer;
+  color: var(--color-white);
   display: inline-block;
   width: 100%;
   padding: 1.2rem;
@@ -592,6 +593,11 @@ section {
   }
   .controls .control {
     margin: 1.2rem 1.6rem;
+    width: 4rem;
+    height: 4rem;
+  }
+  .controls .control i {
+    font-size: 1.6rem;
   }
 }
 

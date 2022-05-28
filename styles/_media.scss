@@ -28,6 +28,11 @@
     background-color: var(--color-gray-5);
     .control {
       margin: 1.2rem 1.6rem;
+      width: 4rem;
+      height: 4rem;
+      i {
+        font-size: 1.6rem;
+      }
     }
   }
 }
