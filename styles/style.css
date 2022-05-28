@@ -19,6 +19,23 @@
   --color-gray-6: #2e2e2e;
 }
 
+.light-mode {
+  --color-primary: #ffdfdf;
+  --color-secondary: #ff5d5d;
+  --color-black: #eaf6ff;
+  --color-white: #051019;
+  --color-gray-6: #d6d6d6;
+  --color-gray-5: #adadad;
+  --color-gray-4: #858585;
+  --color-gray-3: #5c5c5c;
+  --color-gray-2: #333333;
+  --color-gray-1: #2e2e2e;
+}
+
+.light-mode .back-shape {
+  display: none;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -380,7 +397,8 @@ section {
 
 .about .about-container .right-about .about-item {
   padding: 4rem;
-  height: auto;
+  height: 25rem;
+  width: 25rem;
   border: 1px solid var(--color-gray-4);
   border-radius: 9px;
   -webkit-transition: all 0.3s ease-in-out;
@@ -492,7 +510,7 @@ section {
   width: 7rem;
   height: 7rem;
   background-color: var(--color-secondary);
-  color: var(--color-white);
+  color: #eaf6ff;
   border-radius: 50%;
   padding: 2rem;
   margin: 3.6rem;
@@ -542,9 +560,10 @@ section {
 
 .about .timeline .timeline-item .ti-icon i {
   font-size: 1.8rem;
+  color: #eaf6ff;
 }
 
-.about .timeline .timeline-item .ti-icon .ti-duration {
+.about .timeline .timeline-item .ti-duration {
   padding: 0.2rem 0.6rem;
   background-color: var(--color-gray-5);
   border-radius: 15px;
@@ -553,19 +572,19 @@ section {
   font-weight: 500;
 }
 
-.about .timeline .timeline-item .ti-icon h5 {
+.about .timeline .timeline-item h5 {
   padding: 1rem 0;
   font-size: 1.6rem;
   font-weight: 700;
 }
 
-.about .timeline .timeline-item .ti-icon h5 span {
+.about .timeline .timeline-item h5 span {
   color: var(--color-gray-2);
   font-weight: 500;
   font-size: 1.4rem;
 }
 
-.about .timeline .timeline-item .ti-icon p {
+.about .timeline .timeline-item p {
   color: var(--color-gray-2);
 }
 
@@ -630,10 +649,12 @@ section {
   display: block;
   width: 2.4rem;
   height: 2.4rem;
+  margin-right: 1.6rem !important;
 }
 
 .portfolio .portfolio-items .active-portfolio .icon i {
   font-size: 2rem;
+  color: #eaf6ff;
 }
 
 .portfolio .portfolio-items .active-portfolio .icon-1 {
@@ -806,6 +827,41 @@ section {
   pointer-events: none;
 }
 
+.theme-btn {
+  top: 5%;
+  right: 3%;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background-color: var(--color-gray-4);
+  cursor: pointer;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+.theme-btn:active {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.theme-btn i {
+  font-size: 2rem;
+  color: var(--color-gray-2);
+  pointer-events: none;
+}
+
 @media screen and (max-width: 62em) {
   .portfolio {
     overflow-y: auto !important;
@@ -898,6 +954,13 @@ section {
   .about .about-container .left-about {
     padding: 2rem;
   }
+  .about .about-container .right-about .about-item {
+    height: 20rem;
+    width: 20rem;
+  }
+  .about .skill-icons .icons .icon {
+    margin: 2.8rem;
+  }
   .portfolio .portfolio-items {
     padding-bottom: 6rem;
   }
@@ -931,33 +994,73 @@ section {
     padding-bottom: 6rem;
   }
   .portfolio .portfolio-items .portfolio-item {
-    height: 35vh;
+    height: 30vh;
     width: 90%;
   }
-  .about-container .left-about {
+  .portfolio .portfolio-items .active-portfolio .icon {
+    margin-right: 1rem !important;
+  }
+  .about .about-container .left-about {
     padding: 1.6rem 1rem;
   }
-  .about-container .left-about h4 {
+  .about .about-container .left-about h4 {
     font-size: 2.8rem;
     text-align: center;
     margin: 1.2rem;
   }
-  .about-container .left-about p {
+  .about .about-container .left-about p {
     line-height: 1.2;
     padding: 0;
     margin: 1.2rem;
     color: var(--color-gray-1);
   }
-  .about-container .right-about .about-item {
+  .about .about-container .right-about .about-item {
     padding: 1.2rem !important;
   }
-  .icon {
-    width: 4.8rem !important;
-    height: 4.8rem !important;
-    margin: 2.4rem !important;
+  .about .skill-icons .icons .icon {
+    width: 4rem;
+    height: 4rem;
+    margin: 2rem !important;
+    padding: 2.6rem !important;
   }
-  .icon i {
-    font-size: 3.6rem !important;
+  .about .skill-icons .icons .icon i {
+    font-size: 3rem;
+  }
+  .about .timeline {
+    padding-bottom: 4rem;
+  }
+  .about .timeline .timeline-item {
+    padding-left: 5rem;
+    margin-bottom: 3rem;
+  }
+  .about .timeline .timeline-item .ti-icon {
+    left: 0;
+    top: 0;
+    width: 4rem;
+    height: 4rem;
+  }
+  .about .timeline .timeline-item .ti-icon i {
+    font-size: 1.8rem;
+    color: #eaf6ff;
+  }
+  .about .timeline .timeline-item .ti-duration {
+    padding: 0.6rem 1.2rem;
+    border-radius: 17px;
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+  .about .timeline .timeline-item h5 {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  .about .timeline .timeline-item h5 span {
+    color: var(--color-gray-2);
+    font-weight: 500;
+    font-size: 1.4rem;
+  }
+  .about .timeline .timeline-item p {
+    color: var(--color-gray-2);
   }
   .contact-form {
     padding: 2.4rem 8rem;
