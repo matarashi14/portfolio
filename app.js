@@ -69,7 +69,8 @@ function removeActiveClasses() {
   });
 }
 
-setTimeout(headerTimeOut, 4000);
+setTimeout(headerTimeOut, 4);
+
 pageTransitions();
 
 labels.forEach((label) => {

@@ -17,6 +17,23 @@
       }
     }
   }
+
+  .about-container {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1.4rem !important;
+
+    .left-about {
+      padding: 1rem 1.6rem;
+
+      p {
+        padding: 0;
+      }
+    }
+  }
+
   .controls {
     top: auto;
     bottom: 0;
@@ -46,6 +63,10 @@
     font-size: 56.25%;
   }
 
+  section {
+    padding: 3.2rem 6rem;
+  }
+
   .header {
     display: flex;
     justify-content: center;
@@ -57,6 +78,26 @@
         .name {
           font-size: 4rem;
         }
+      }
+    }
+  }
+
+  .about {
+    .about-container {
+      .left-about {
+        padding: 2rem;
+      }
+    }
+  }
+
+  .portfolio {
+    .portfolio-items {
+      padding-bottom: 6rem;
+      .portfolio-item {
+        height: 40vh;
+        width: 90%;
+      }
+      .active-portfolio {
       }
     }
   }
@@ -72,7 +113,7 @@
   }
 
   section {
-    padding: 2.4rem 4rem;
+    padding: 4rem 2.4rem;
   }
 
   .header {
@@ -85,9 +126,57 @@
         }
 
         .under-name {
-          font-size: 2rem;
+          font-size: 2.6rem;
+        }
+
+        .header-description {
+          font-size: 1.6rem;
         }
       }
+    }
+  }
+  .portfolio {
+    .portfolio-items {
+      padding-bottom: 6rem;
+      .portfolio-item {
+        height: 35vh;
+        width: 90%;
+      }
+      .active-portfolio {
+      }
+    }
+  }
+
+  .about-container {
+    .left-about {
+      padding: 1.6rem 1rem;
+      h4 {
+        font-size: 2.8rem;
+        text-align: center;
+        margin: 1.2rem;
+      }
+
+      p {
+        line-height: 1.2;
+        padding: 0;
+        margin: 1.2rem;
+        color: var(--color-gray-1);
+      }
+    }
+
+    .right-about {
+      .about-item {
+        padding: 1.2rem !important;
+      }
+    }
+  }
+
+  .icon {
+    width: 4.8rem !important;
+    height: 4.8rem !important;
+    margin: 2.4rem !important;
+    i {
+      font-size: 3.6rem !important;
     }
   }
 

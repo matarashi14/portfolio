@@ -47,7 +47,7 @@ section {
   position: absolute;
   left: 0;
   top: 0;
-  padding: 3.2rem 10rem;
+  padding: 3.2rem 12rem;
 }
 
 .section {
@@ -330,6 +330,245 @@ section {
   }
 }
 
+.about {
+  overflow-y: auto;
+}
+
+.about .about-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  padding: 4rem 8rem;
+  height: auto;
+}
+
+.about .about-container .left-about {
+  padding: 2rem 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .about-container .left-about h4 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 1.2rem;
+}
+
+.about .about-container .left-about p {
+  line-height: 1.2;
+  padding: 1.2rem 0.8rem;
+  margin: 1.2rem;
+  color: var(--color-gray-1);
+}
+
+.about .about-container .right-about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-gap: 2.4rem;
+}
+
+.about .about-container .right-about .about-item {
+  padding: 4rem;
+  height: auto;
+  border: 1px solid var(--color-gray-4);
+  border-radius: 9px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about .about-container .right-about .about-item:hover {
+  cursor: default;
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  border-color: var(--color-secondary);
+  -webkit-box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+          box-shadow: 1px 4px 15px rgba(0, 0, 0, 0.32);
+}
+
+.about .about-container .right-about .about-item .about-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .about-container .right-about .about-item .about-text .l-text {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--color-secondary) !important;
+}
+
+.about .about-container .right-about .about-item .about-text .s-text {
+  padding-left: 3rem;
+  position: relative;
+  font-size: 2rem;
+  color: var(--color-gray-2);
+  letter-spacing: 1.8px;
+}
+
+.about .about-container .right-about .about-item .about-text .s-text::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 1.6rem;
+  width: 2.4rem;
+  height: 2px;
+  background-color: var(--color-gray-4);
+}
+
+.about .about-mini-title {
+  font-size: 1.6rem;
+  text-align: center;
+  padding: 3.6rem 0;
+  position: relative;
+}
+
+.about .about-mini-title::before {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 40%;
+  height: 1px;
+  background-color: var(--color-gray-5);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.about .skill-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .skill-icons .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about .skill-icons .icons .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 7rem;
+  height: 7rem;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-radius: 50%;
+  padding: 2rem;
+  margin: 3.6rem;
+}
+
+.about .skill-icons .icons .icon i {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+.about .timeline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-bottom: 3rem;
+}
+
+.about .timeline .timeline-item {
+  position: relative;
+  padding-left: 3rem;
+  border-left: 1px solid var(--color-gray-5);
+  margin-bottom: 2.8rem;
+}
+
+.about .timeline .timeline-item .ti-icon {
+  position: absolute;
+  left: -3rem;
+  top: 0;
+  background-color: var(--color-secondary);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about .timeline .timeline-item .ti-icon i {
+  font-size: 1.8rem;
+}
+
+.about .timeline .timeline-item .ti-icon .ti-duration {
+  padding: 0.2rem 0.6rem;
+  background-color: var(--color-gray-5);
+  border-radius: 15px;
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.about .timeline .timeline-item .ti-icon h5 {
+  padding: 1rem 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.about .timeline .timeline-item .ti-icon h5 span {
+  color: var(--color-gray-2);
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.about .timeline .timeline-item .ti-icon p {
+  color: var(--color-gray-2);
+}
+
 .portfolio {
   width: 100%;
 }
@@ -384,19 +623,27 @@ section {
 }
 
 .portfolio .portfolio-items .active-portfolio .icon {
+  position: absolute;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  position: absolute;
   border-radius: 50%;
   display: block;
-  bottom: 1.4rem;
-  left: 1.4rem;
   width: 2.4rem;
   height: 2.4rem;
 }
 
 .portfolio .portfolio-items .active-portfolio .icon i {
   font-size: 2rem;
+}
+
+.portfolio .portfolio-items .active-portfolio .icon-1 {
+  bottom: 1.4rem;
+  left: 1rem;
+}
+
+.portfolio .portfolio-items .active-portfolio .icon-2 {
+  bottom: 1.4rem;
+  left: 3.8rem;
 }
 
 .portfolio .portfolio-items .active-portfolio .icon:hover i {
@@ -575,6 +822,28 @@ section {
     width: 96%;
     margin: 2rem 0;
   }
+  .about-container {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2rem 1.4rem !important;
+  }
+  .about-container .left-about {
+    padding: 1rem 1.6rem;
+  }
+  .about-container .left-about p {
+    padding: 0;
+  }
   .controls {
     top: auto;
     bottom: 0;
@@ -605,6 +874,9 @@ section {
   html {
     font-size: 56.25%;
   }
+  section {
+    padding: 3.2rem 6rem;
+  }
   .header {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -623,6 +895,16 @@ section {
   .header .header-container .header-content .name {
     font-size: 4rem;
   }
+  .about .about-container .left-about {
+    padding: 2rem;
+  }
+  .portfolio .portfolio-items {
+    padding-bottom: 6rem;
+  }
+  .portfolio .portfolio-items .portfolio-item {
+    height: 40vh;
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 26em) {
@@ -630,7 +912,7 @@ section {
     font-size: 50%;
   }
   section {
-    padding: 2.4rem 4rem;
+    padding: 4rem 2.4rem;
   }
   .header .header-container {
     text-align: center;
@@ -640,7 +922,42 @@ section {
     margin-bottom: 0 !important;
   }
   .header .header-container .header-content .under-name {
-    font-size: 2rem;
+    font-size: 2.6rem;
+  }
+  .header .header-container .header-content .header-description {
+    font-size: 1.6rem;
+  }
+  .portfolio .portfolio-items {
+    padding-bottom: 6rem;
+  }
+  .portfolio .portfolio-items .portfolio-item {
+    height: 35vh;
+    width: 90%;
+  }
+  .about-container .left-about {
+    padding: 1.6rem 1rem;
+  }
+  .about-container .left-about h4 {
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 1.2rem;
+  }
+  .about-container .left-about p {
+    line-height: 1.2;
+    padding: 0;
+    margin: 1.2rem;
+    color: var(--color-gray-1);
+  }
+  .about-container .right-about .about-item {
+    padding: 1.2rem !important;
+  }
+  .icon {
+    width: 4.8rem !important;
+    height: 4.8rem !important;
+    margin: 2.4rem !important;
+  }
+  .icon i {
+    font-size: 3.6rem !important;
   }
   .contact-form {
     padding: 2.4rem 8rem;
