@@ -358,6 +358,7 @@ section {
       grid-template-columns: 1fr 1fr;
   padding: 4rem 8rem;
   height: auto;
+  margin-bottom: 8rem;
 }
 
 .about .about-container .left-about {
@@ -383,8 +384,21 @@ section {
 .about .about-container .left-about p {
   line-height: 1.2;
   padding: 1.2rem 0.8rem;
-  margin: 1.2rem;
+  margin-top: 1rem;
   color: var(--color-gray-1);
+}
+
+.about .about-container .left-about p span {
+  font-weight: 700;
+  font-style: italic;
+  color: var(--color-secondary);
+}
+
+.about .about-container .left-about .list {
+  margin-left: 1.2rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0.4rem;
+  padding: 0 !important;
 }
 
 .about .about-container .right-about {
@@ -447,7 +461,7 @@ section {
   top: 1.6rem;
   width: 2.4rem;
   height: 2px;
-  background-color: var(--color-gray-4);
+  background-color: var(--color-gray-3);
 }
 
 .about .about-mini-title {
@@ -462,9 +476,9 @@ section {
   position: absolute;
   left: 50%;
   top: 0;
-  width: 40%;
-  height: 1px;
-  background-color: var(--color-gray-5);
+  width: 20%;
+  height: 2px;
+  background-color: var(--color-gray-3);
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
 }
@@ -483,6 +497,7 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 8rem;
 }
 
 .about .skill-icons .icons {
@@ -530,6 +545,7 @@ section {
       -ms-flex-direction: column;
           flex-direction: column;
   padding-bottom: 3rem;
+  margin-bottom: 8rem;
 }
 
 .about .timeline .timeline-item {
