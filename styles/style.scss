@@ -52,7 +52,7 @@ html {
 
 body {
   background-color: var(--color-primary);
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-white);
@@ -496,10 +496,14 @@ section {
       position: relative;
       img {
         border: 1px solid var(--color-gray-3);
-        object-fit: cover;
+        object-fit: contain;
         width: 100%;
         height: inherit;
         border-radius: 11px;
+      }
+
+      .skill-stuck {
+        display: none;
       }
 
       .icon {
@@ -508,7 +512,7 @@ section {
     }
 
     .active-portfolio {
-      flex: 5;
+      flex: 6;
       opacity: 1;
       .icon {
         position: absolute;
@@ -538,6 +542,26 @@ section {
         i {
           color: var(--color-secondary);
           transform: scale(1.2);
+        }
+      }
+
+      .skill-stuck {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 1.4rem;
+        left: 1rem;
+        i {
+          font-size: 2rem;
+          color: var(--color-secondary);
+          margin: 1rem 0.8rem;
+        }
+
+        p {
+          font-family: "Nova Mono", monospace;
+          font-size: 2rem;
+          color: var(--color-secondary);
+          margin: 1rem 0.8rem;
         }
       }
     }

@@ -42,7 +42,7 @@ html {
 
 body {
   background-color: var(--color-primary);
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   color: var(--color-white);
@@ -623,11 +623,15 @@ section {
 
 .portfolio .portfolio-items .portfolio-item img {
   border: 1px solid var(--color-gray-3);
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: inherit;
   border-radius: 11px;
+}
+
+.portfolio .portfolio-items .portfolio-item .skill-stuck {
+  display: none;
 }
 
 .portfolio .portfolio-items .portfolio-item .icon {
@@ -635,9 +639,9 @@ section {
 }
 
 .portfolio .portfolio-items .active-portfolio {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
   opacity: 1;
 }
 
@@ -671,6 +675,31 @@ section {
   color: var(--color-secondary);
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
+}
+
+.portfolio .portfolio-items .active-portfolio .skill-stuck {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 1.4rem;
+  left: 1rem;
+}
+
+.portfolio .portfolio-items .active-portfolio .skill-stuck i {
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin: 1rem 0.8rem;
+}
+
+.portfolio .portfolio-items .active-portfolio .skill-stuck p {
+  font-family: "Nova Mono", monospace;
+  font-size: 2rem;
+  color: var(--color-secondary);
+  margin: 1rem 0.8rem;
 }
 
 .contact-form {
@@ -994,7 +1023,7 @@ section {
     padding-bottom: 6rem;
   }
   .portfolio .portfolio-items .portfolio-item {
-    height: 30vh;
+    height: 25vh;
     width: 90%;
   }
   .portfolio .portfolio-items .active-portfolio .icon {
