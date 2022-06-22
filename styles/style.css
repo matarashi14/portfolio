@@ -673,8 +673,8 @@ section {
 }
 
 .portfolio .portfolio-items .active-portfolio .icon i {
-  font-size: 2rem;
-  color: #eaf6ff;
+  font-size: 2.4rem;
+  color: var(--color-white);
 }
 
 .portfolio .portfolio-items .active-portfolio .icon-1 {
@@ -706,14 +706,14 @@ section {
 }
 
 .portfolio .portfolio-items .active-portfolio .skill-stuck i {
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--color-secondary);
   margin: 1rem 0.8rem;
 }
 
 .portfolio .portfolio-items .active-portfolio .skill-stuck p {
   font-family: "Nova Mono", monospace;
-  font-size: 2rem;
+  font-size: 2.4rem;
   color: var(--color-secondary);
   margin: 1rem 0.8rem;
 }
