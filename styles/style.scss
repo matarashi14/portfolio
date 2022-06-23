@@ -39,10 +39,6 @@
   --color-gray-3: #5c5c5c;
   --color-gray-2: #333333;
   --color-gray-1: #2e2e2e;
-
-  .back-shape {
-    display: none;
-  }
 }
 
 html {
@@ -145,6 +141,20 @@ section {
   grid-template-columns: repeat(4, 1fr);
 }
 
+@keyframes animate {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+    border-radius: 0;
+  }
+
+  100% {
+    transform: translateY(-1000px) rotate(720deg);
+    opacity: 0;
+    border-radius: 50%;
+  }
+}
+
 // *********************************************
 //Greet page
 // *********************************************
@@ -188,7 +198,10 @@ section {
     justify-content: center;
     align-items: center;
     .header-content {
-      width: 80%;
+      width: 100%;
+      position: absolute;
+      top: 50vh;
+      padding: 0 8rem;
       .name {
         font-size: 4.8rem;
         font-weight: 700;
@@ -210,88 +223,202 @@ section {
         line-height: 1.2;
       }
     }
+
+    .back-shape {
+      width: 100%;
+      height: 100vh;
+      background-color: var(--color-primary);
+      .circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        li {
+          position: absolute;
+          display: block;
+          list-style: none;
+          width: 2rem;
+          height: 2rem;
+          background: var(--color-gray-4);
+          animation: animate 25s linear infinite;
+          bottom: -15rem;
+
+          li:nth-child(1) {
+            left: 25%;
+            width: 8rem;
+            height: 8rem;
+            animation-delay: 0s;
+          }
+
+          li:nth-child(2) {
+            left: 10%;
+            width: 2rem;
+            height: 2rem;
+            animation-delay: 2s;
+            animation-duration: 12s;
+          }
+
+          li:nth-child(3) {
+            left: 70%;
+            width: 2rem;
+            height: 2rem;
+            animation-delay: 4s;
+          }
+
+          li:nth-child(4) {
+            left: 40%;
+            width: 6rem;
+            height: 6rem;
+            animation-delay: 0s;
+            animation-duration: 18s;
+          }
+
+          li:nth-child(5) {
+            left: 65%;
+            width: 2rem;
+            height: 2rem;
+            animation-delay: 0s;
+          }
+
+          li:nth-child(6) {
+            left: 75%;
+            width: 11rem;
+            height: 11rem;
+            animation-delay: 3s;
+          }
+
+          li:nth-child(7) {
+            left: 35%;
+            width: 15rem;
+            height: 15rem;
+            animation-delay: 7s;
+          }
+
+          li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+          }
+
+          li:nth-child(9) {
+            left: 20%;
+            width: 1.5rem;
+            height: 1.5rem;
+            animation-delay: 2s;
+            animation-duration: 35s;
+          }
+
+          li:nth-child(10) {
+            left: 85%;
+            width: 1.5rem;
+            height: 1.5rem;
+            animation-delay: 0s;
+            animation-duration: 11s;
+          }
+        }
+      }
+    }
   }
 
   .back-shape {
-    transition: all 0.3s ease-in-out;
-    width: 65%;
-    height: 100%;
-    background-color: #092133;
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    clip-path: polygon(100% 0%, 44% 50%, 100% 100%, 12.5% 100%, 0% 50%, 25% 0%);
-    animation-name: poly;
-    animation-duration: 8s;
-    animation-delay: -0.5s;
-    animation-iteration-count: 1000;
-    @keyframes poly {
-      0% {
-        background-color: #092133;
-        clip-path: polygon(
-          100% 0%,
-          44% 50%,
-          100% 100%,
-          12.5% 100%,
-          0% 50%,
-          25% 0%
-        );
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+    .circles {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      li {
+        position: absolute;
+        display: block;
+        list-style: none;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 0.2);
+        animation: animate 25s linear infinite;
+        bottom: -150px;
       }
-      20% {
-        background-color: #134266;
-        clip-path: polygon(
-          85% 0%,
-          55% 50%,
-          80% 100%,
-          25% 100%,
-          75% 50%,
-          50% 0%
-        );
+
+      li:nth-child(1) {
+        left: 25%;
+        width: 80px;
+        height: 80px;
+        animation-delay: 0s;
       }
-      40% {
-        background-color: #092133;
-        clip-path: polygon(
-          70% 0%,
-          66% 50%,
-          60% 100%,
-          50% 100%,
-          50% 50%,
-          75% 0%
-        );
+
+      li:nth-child(2) {
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 2s;
+        animation-duration: 12s;
       }
-      60% {
-        background-color: #134266;
-        clip-path: polygon(
-          55% 0%,
-          77% 50%,
-          60% 100%,
-          75% 100%,
-          90% 50%,
-          75% 0%
-        );
+
+      li:nth-child(3) {
+        left: 70%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 4s;
       }
-      80% {
-        background-color: #092133;
-        clip-path: polygon(
-          85% 0%,
-          55% 50%,
-          80% 100%,
-          25% 100%,
-          30% 50%,
-          50% 0%
-        );
+
+      li:nth-child(4) {
+        left: 40%;
+        width: 60px;
+        height: 60px;
+        animation-delay: 0s;
+        animation-duration: 18s;
       }
-      100% {
-        background-color: #134266;
-        clip-path: polygon(
-          100% 0%,
-          44% 50%,
-          100% 100%,
-          25% 100%,
-          0% 50%,
-          25% 0%
-        );
+
+      li:nth-child(5) {
+        left: 65%;
+        width: 20px;
+        height: 20px;
+        animation-delay: 0s;
+      }
+
+      li:nth-child(6) {
+        left: 75%;
+        width: 110px;
+        height: 110px;
+        animation-delay: 3s;
+      }
+
+      li:nth-child(7) {
+        left: 35%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 7s;
+      }
+
+      li:nth-child(8) {
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        animation-delay: 15s;
+        animation-duration: 45s;
+      }
+
+      li:nth-child(9) {
+        left: 20%;
+        width: 15px;
+        height: 15px;
+        animation-delay: 2s;
+        animation-duration: 35s;
+      }
+
+      li:nth-child(10) {
+        left: 85%;
+        width: 150px;
+        height: 150px;
+        animation-delay: 0s;
+        animation-duration: 11s;
       }
     }
   }
@@ -347,13 +474,12 @@ section {
       grid-template-columns: 1fr 1fr;
       grid-gap: 2.4rem;
       .about-item {
-        padding: 4rem;
-        height: 25rem;
-        width: 25rem;
+        padding: 2rem;
+        height: 20rem;
+        width: 20rem;
         border: 1px solid var(--color-gray-4);
         border-radius: 9px;
         transition: all 0.3s ease-in-out;
-        box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.1);
         &:hover {
           cursor: default;
           transform: scale(1.03);
@@ -445,13 +571,13 @@ section {
     margin-bottom: 8rem;
     .timeline-item {
       position: relative;
-      padding-left: 3rem;
+      padding-left: 12rem;
       border-left: 1px solid var(--color-gray-5);
       margin-bottom: 2.8rem;
       .ti-icon {
         position: absolute;
-        left: -3rem;
-        top: 0;
+        left: 0;
+        top: 1.4rem;
         background-color: var(--color-secondary);
         width: 5rem;
         height: 5rem;
@@ -502,6 +628,7 @@ section {
     align-items: center;
     padding: 2rem 0 4rem 0;
     .portfolio-item {
+      background-color: transparent;
       height: 80vh;
       border-radius: 11px;
       cursor: pointer;
@@ -516,6 +643,7 @@ section {
         width: 100%;
         height: inherit;
         border-radius: 11px;
+        opacity: 0.75;
       }
 
       .skill-stuck {
@@ -568,12 +696,18 @@ section {
         top: 1.4rem;
         left: 1rem;
         i {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           font-size: 2.4rem;
           color: var(--color-secondary);
           margin: 1rem 0.8rem;
         }
 
         p {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           font-family: "Nova Mono", monospace;
           font-size: 2.4rem;
           color: var(--color-secondary);

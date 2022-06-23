@@ -1,4 +1,25 @@
 //**********************************
+// 1300px (82em * 16px)
+//*********************************
+@media screen and (max-width: 82em) {
+  .about {
+    .about-container {
+      .left-about {
+        padding: 2rem;
+      }
+
+      .right-about {
+        grid-gap: 1.4rem;
+        .about-item {
+          padding: 2rem;
+          height: 18rem;
+          width: 18rem;
+        }
+      }
+    }
+  }
+}
+//**********************************
 // 992px (62em * 16px)
 //*********************************
 
@@ -12,6 +33,25 @@
         height: 45vh;
         width: 96%;
         margin: 2rem 0;
+      }
+    }
+
+    .active-portfolio {
+      .skill-stuck {
+        i {
+          background-color: var(--color-secondary);
+          color: var(--color-white) !important;
+          border-radius: 50%;
+          padding: 1rem;
+          opacity: 0.9;
+        }
+
+        p {
+          font-size: 2.4rem;
+          background-color: var(--color-secondary);
+          color: var(--color-white) !important;
+          border-radius: 50%;
+        }
       }
     }
   }
@@ -107,17 +147,17 @@
       padding-bottom: 6rem;
       .portfolio-item {
         height: 40vh;
-        width: 90%;
+        width: 95%;
       }
     }
   }
 }
 
 //**********************************
-// 416px (26em * 16px)
+// 480px (28em * 16px)
 //*********************************
 
-@media screen and (max-width: 26em) {
+@media screen and (max-width: 30em) {
   html {
     font-size: 50%;
   }
@@ -128,8 +168,8 @@
 
   .header {
     .header-container {
-      text-align: center;
       .header-content {
+        padding: 0 2.6rem;
         .name {
           font-size: 3.2rem;
           margin-bottom: 0 !important;
@@ -151,12 +191,32 @@
       padding-bottom: 6rem;
       .portfolio-item {
         height: 25vh;
-        width: 90%;
+        width: 96%;
+        img {
+          width: 95%;
+          padding: 2rem 0.4rem;
+        }
       }
 
       .active-portfolio {
         .icon {
           margin-right: 1rem !important;
+
+          i {
+            color: var(--color-secondary);
+          }
+        }
+
+        .skill-stuck {
+          i {
+            font-size: 1.6rem !important;
+            padding: 0.6rem;
+          }
+
+          p {
+            font-size: 1.6rem !important;
+            padding: 0.6rem;
+          }
         }
       }
     }
@@ -165,7 +225,8 @@
   .about {
     .about-container {
       .left-about {
-        padding: 1.6rem 1rem;
+        padding: 0;
+        margin-bottom: 8rem;
         h4 {
           font-size: 2.8rem;
           text-align: center;
