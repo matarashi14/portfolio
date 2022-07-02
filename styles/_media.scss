@@ -24,38 +24,6 @@
 //*********************************
 
 @media screen and (max-width: 62em) {
-  .portfolio {
-    overflow-y: auto !important;
-    .portfolio-items {
-      flex-direction: column;
-      padding-bottom: 8rem;
-      .portfolio-item {
-        height: 45vh;
-        width: 96%;
-        margin: 2rem 0;
-      }
-    }
-
-    .active-portfolio {
-      .skill-stuck {
-        i {
-          background-color: var(--color-secondary);
-          color: var(--color-white) !important;
-          border-radius: 50%;
-          padding: 1rem;
-          opacity: 0.9;
-        }
-
-        p {
-          font-size: 2.4rem;
-          background-color: var(--color-secondary);
-          color: var(--color-white) !important;
-          border-radius: 50%;
-        }
-      }
-    }
-  }
-
   .about-container {
     display: flex !important;
     flex-direction: column;
@@ -145,10 +113,9 @@
 
   .portfolio {
     .portfolio-items {
-      padding-bottom: 6rem;
-      .portfolio-item {
-        height: 40vh;
-        width: 95%;
+      .portfolio-card {
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -182,42 +149,6 @@
 
         .header-description {
           font-size: 1.6rem;
-        }
-      }
-    }
-  }
-
-  .portfolio {
-    .portfolio-items {
-      padding-bottom: 6rem;
-      .portfolio-item {
-        height: 25vh;
-        width: 96%;
-        img {
-          width: 95%;
-          padding: 2rem 0.4rem;
-        }
-      }
-
-      .active-portfolio {
-        .icon {
-          margin-right: 1rem !important;
-
-          i {
-            color: var(--color-secondary);
-          }
-        }
-
-        .skill-stuck {
-          i {
-            font-size: 1.6rem !important;
-            padding: 0.6rem;
-          }
-
-          p {
-            font-size: 1.6rem !important;
-            padding: 0.6rem;
-          }
         }
       }
     }

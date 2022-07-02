@@ -654,136 +654,137 @@ section {
 
 .portfolio {
   width: 100%;
+  overflow-y: auto;
 }
 
 .portfolio .portfolio-items {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 2rem 0 4rem 0;
+  padding: 4rem;
 }
 
-.portfolio .portfolio-items .portfolio-item {
-  background-color: transparent;
-  height: 80vh;
-  border-radius: 11px;
-  cursor: pointer;
-  -webkit-box-flex: 0.4;
-      -ms-flex: 0.4;
-          flex: 0.4;
-  margin: 1rem;
-  -webkit-transition: -webkit-box-flex 0.3s ease-in-out;
-  transition: -webkit-box-flex 0.3s ease-in-out;
-  transition: flex 0.3s ease-in-out;
-  transition: flex 0.3s ease-in-out, -webkit-box-flex 0.3s ease-in-out, -ms-flex 0.3s ease-in-out;
-  opacity: 0.3;
-  position: relative;
+.portfolio .portfolio-items .portfolio-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 30rem;
+  height: 37rem;
+  background-color: #858585;
+  color: var(--color-white);
+  -webkit-box-shadow: 5px 10px 15px -3px rgba(0, 0, 0, 0.1);
+          box-shadow: 5px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  margin: 2rem;
+  border-radius: 9px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.portfolio .portfolio-items .portfolio-item img {
-  border: 1px solid var(--color-gray-3);
+.portfolio .portfolio-items .portfolio-card .img {
+  width: 100%;
+  border-radius: 9px 9px 0 0;
+}
+
+.portfolio .portfolio-items .portfolio-card .img img {
+  border-radius: 9px 9px 0 0;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
-  height: inherit;
-  border-radius: 11px;
-  opacity: 0.75;
 }
 
-.portfolio .portfolio-items .portfolio-item .skill-stuck {
-  display: none;
+.portfolio .portfolio-items .portfolio-card .skill-badges {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem;
 }
 
-.portfolio .portfolio-items .portfolio-item .icon {
-  display: none;
+.portfolio .portfolio-items .portfolio-card .skill-badges .badge {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #eaf6ff;
+  background-color: #5c5c5c;
+  border-radius: 19px;
+  padding: 0.2rem 0.6rem;
+  margin: 0 0.2rem;
 }
 
-.portfolio .portfolio-items .active-portfolio {
-  -webkit-box-flex: 6;
-      -ms-flex: 6;
-          flex: 6;
-  opacity: 1;
+.portfolio .portfolio-items .portfolio-card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1.2rem;
 }
 
-.portfolio .portfolio-items .active-portfolio .icon {
-  position: absolute;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  border-radius: 50%;
-  display: block;
-  width: 2.4rem;
-  height: 2.4rem;
-  margin-right: 1.6rem !important;
-}
-
-.portfolio .portfolio-items .active-portfolio .icon i {
+.portfolio .portfolio-items .portfolio-card .card-content .project-name {
   font-size: 2.4rem;
+  font-weight: 700;
+  color: #eaf6ff;
+  margin-bottom: 1rem;
+}
+
+.portfolio .portfolio-items .portfolio-card .card-content .project-description {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: #eaf6ff;
+  margin-bottom: 1.6rem;
+}
+
+.portfolio .portfolio-items .portfolio-card .card-content .portfolio-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.portfolio .portfolio-items .portfolio-card .card-content .portfolio-link a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.6rem;
+}
+
+.portfolio .portfolio-items .portfolio-card .card-content .portfolio-link a i {
+  color: var(--color-secondary);
+  font-size: 2.2rem;
+}
+
+.portfolio .portfolio-items .portfolio-card .card-content .portfolio-link a i:hover {
   color: var(--color-white);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
-.portfolio .portfolio-items .active-portfolio .icon-1 {
-  bottom: 1.4rem;
-  left: 1rem;
-}
-
-.portfolio .portfolio-items .active-portfolio .icon-2 {
-  bottom: 1.4rem;
-  left: 3.8rem;
-}
-
-.portfolio .portfolio-items .active-portfolio .icon:hover i {
-  color: var(--color-secondary);
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-.portfolio .portfolio-items .active-portfolio .skill-stuck {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: absolute;
-  top: 1.4rem;
-  left: 1rem;
-}
-
-.portfolio .portfolio-items .active-portfolio .skill-stuck i {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-size: 2.4rem;
-  color: var(--color-secondary);
-  margin: 1rem 0.8rem;
-}
-
-.portfolio .portfolio-items .active-portfolio .skill-stuck p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  font-family: "Nova Mono", monospace;
-  font-size: 2.4rem;
-  color: var(--color-secondary);
-  margin: 1rem 0.8rem;
+.portfolio .portfolio-items .portfolio-card:hover {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 .contact-form {
@@ -990,34 +991,6 @@ section {
 }
 
 @media screen and (max-width: 62em) {
-  .portfolio {
-    overflow-y: auto !important;
-  }
-  .portfolio .portfolio-items {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding-bottom: 8rem;
-  }
-  .portfolio .portfolio-items .portfolio-item {
-    height: 45vh;
-    width: 96%;
-    margin: 2rem 0;
-  }
-  .portfolio .active-portfolio .skill-stuck i {
-    background-color: var(--color-secondary);
-    color: var(--color-white) !important;
-    border-radius: 50%;
-    padding: 1rem;
-    opacity: 0.9;
-  }
-  .portfolio .active-portfolio .skill-stuck p {
-    font-size: 2.4rem;
-    background-color: var(--color-secondary);
-    color: var(--color-white) !important;
-    border-radius: 50%;
-  }
   .about-container {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -1104,12 +1077,9 @@ section {
   .about .skill-icons .icons .icon {
     margin: 2.8rem;
   }
-  .portfolio .portfolio-items {
-    padding-bottom: 6rem;
-  }
-  .portfolio .portfolio-items .portfolio-item {
-    height: 40vh;
-    width: 95%;
+  .portfolio .portfolio-items .portfolio-card {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -1132,31 +1102,6 @@ section {
   }
   .header .header-container .header-content .header-description {
     font-size: 1.6rem;
-  }
-  .portfolio .portfolio-items {
-    padding-bottom: 6rem;
-  }
-  .portfolio .portfolio-items .portfolio-item {
-    height: 25vh;
-    width: 96%;
-  }
-  .portfolio .portfolio-items .portfolio-item img {
-    width: 95%;
-    padding: 2rem 0.4rem;
-  }
-  .portfolio .portfolio-items .active-portfolio .icon {
-    margin-right: 1rem !important;
-  }
-  .portfolio .portfolio-items .active-portfolio .icon i {
-    color: var(--color-secondary);
-  }
-  .portfolio .portfolio-items .active-portfolio .skill-stuck i {
-    font-size: 1.6rem !important;
-    padding: 0.6rem;
-  }
-  .portfolio .portfolio-items .active-portfolio .skill-stuck p {
-    font-size: 1.6rem !important;
-    padding: 0.6rem;
   }
   .about .about-container .left-about {
     padding: 0;

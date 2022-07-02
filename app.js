@@ -54,22 +54,7 @@ function pageTransitions() {
   });
 }
 
-const panels = document.querySelectorAll(".portfolio-item");
-
-panels.forEach((panel) => {
-  panel.addEventListener("click", () => {
-    removeActiveClasses();
-    panel.classList.add("active-portfolio");
-  });
-});
-
-function removeActiveClasses() {
-  panels.forEach((panel) => {
-    panel.classList.remove("active-portfolio");
-  });
-}
-
-setTimeout(headerTimeOut, 4000);
+setTimeout(headerTimeOut, 4);
 
 pageTransitions();
 

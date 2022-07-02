@@ -521,98 +521,91 @@ section {
 
 .portfolio {
   width: 100%;
+  overflow-y: auto;
   .portfolio-items {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0 4rem 0;
-    .portfolio-item {
-      background-color: transparent;
-      height: 80vh;
-      border-radius: 11px;
-      cursor: pointer;
-      flex: 0.4;
-      margin: 1rem;
-      transition: flex 0.3s ease-in-out;
-      opacity: 0.3;
-      position: relative;
-      img {
-        border: 1px solid var(--color-gray-3);
-        object-fit: contain;
+    padding: 4rem;
+    .portfolio-card {
+      display: flex;
+      flex-direction: column;
+      width: 30rem;
+      height: 37rem;
+      background-color: #858585;
+      color: var(--color-white);
+      box-shadow: 5px 10px 15px -3px rgba($color: #000000, $alpha: 0.1);
+      margin: 2rem;
+      border-radius: 9px;
+      transition: all 0.3s ease-in-out;
+      .img {
         width: 100%;
-        height: inherit;
-        border-radius: 11px;
-        opacity: 0.75;
+        border-radius: 9px 9px 0 0;
+        img {
+          border-radius: 9px 9px 0 0;
+          object-fit: contain;
+          width: 100%;
+        }
       }
 
-      .skill-stuck {
-        display: none;
+      .skill-badges {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        margin: 1rem;
+        .badge {
+          font-size: 0.8rem;
+          font-weight: 400;
+          color: #eaf6ff;
+          background-color: #5c5c5c;
+          border-radius: 19px;
+          padding: 0.2rem 0.6rem;
+          margin: 0 0.2rem;
+        }
       }
 
-      .icon {
-        display: none;
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        padding: 1.2rem;
+        .project-name {
+          font-size: 2.4rem;
+          font-weight: 700;
+          color: #eaf6ff;
+          margin-bottom: 1rem;
+        }
+
+        .project-description {
+          font-weight: 400;
+          font-size: 1.4rem;
+          color: #eaf6ff;
+          margin-bottom: 1.6rem;
+        }
+
+        .portfolio-link {
+          display: flex;
+          a {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 0.6rem;
+            i {
+              color: var(--color-secondary);
+              font-size: 2.2rem;
+            }
+
+            i:hover {
+              color: var(--color-white);
+              transform: scale(1.1);
+            }
+          }
+        }
       }
     }
 
-    .active-portfolio {
-      flex: 6;
-      opacity: 1;
-      .icon {
-        position: absolute;
-        transition: all 0.3s ease-in-out;
-        border-radius: 50%;
-        display: block;
-        width: 2.4rem;
-        height: 2.4rem;
-        margin-right: 1.6rem !important;
-        i {
-          font-size: 2.4rem;
-          color: var(--color-white);
-        }
-      }
-
-      .icon-1 {
-        bottom: 1.4rem;
-        left: 1rem;
-      }
-
-      .icon-2 {
-        bottom: 1.4rem;
-        left: 3.8rem;
-      }
-
-      .icon:hover {
-        i {
-          color: var(--color-secondary);
-          transform: scale(1.2);
-        }
-      }
-
-      .skill-stuck {
-        display: flex;
-        align-items: center;
-        position: absolute;
-        top: 1.4rem;
-        left: 1rem;
-        i {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 2.4rem;
-          color: var(--color-secondary);
-          margin: 1rem 0.8rem;
-        }
-
-        p {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-family: "Nova Mono", monospace;
-          font-size: 2.4rem;
-          color: var(--color-secondary);
-          margin: 1rem 0.8rem;
-        }
-      }
+    .portfolio-card:hover {
+      transform: translateY(5px);
     }
   }
 }
