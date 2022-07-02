@@ -718,10 +718,10 @@ section {
 }
 
 .portfolio .portfolio-items .portfolio-card .skill-badges .badge {
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 1rem;
+  font-weight: 500;
   color: #eaf6ff;
-  background-color: #5c5c5c;
+  background-color: var(--color-secondary);
   border-radius: 19px;
   padding: 0.2rem 0.6rem;
   margin: 0 0.2rem;
@@ -812,7 +812,7 @@ section {
 
 .contact-form .form-control input {
   background-color: transparent;
-  border: 0;
+  border: none;
   border-bottom: 2px var(--color-gray-1) solid;
   color: var(--color-white);
   display: block;
@@ -1076,6 +1076,9 @@ section {
   }
   .about .skill-icons .icons .icon {
     margin: 2.8rem;
+  }
+  .portfolio .portfolio-items {
+    padding: 4rem 1rem;
   }
   .portfolio .portfolio-items .portfolio-card {
     width: 100%;
