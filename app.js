@@ -54,7 +54,7 @@ function pageTransitions() {
   });
 }
 
-setTimeout(headerTimeOut, 4);
+setTimeout(headerTimeOut, 4000);
 
 pageTransitions();
 

@@ -190,14 +190,15 @@ section {
 
 .header {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
   .header-container {
-    position: absolute;
-    top: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .header-content {
+      display: flex;
+      flex-direction: column;
       width: 100%;
       padding: 0 8rem;
       .name {
@@ -219,14 +220,55 @@ section {
       .header-description {
         font-size: 2.4rem;
         line-height: 1.2;
+        margin-bottom: 2rem;
+      }
+
+      .btn-header {
+        display: flex;
+        .btn {
+          margin: 0 1rem;
+          font-size: 2.4rem;
+          font-weight: 700;
+          padding: 0.8rem 0.4rem;
+          border-radius: 9px;
+          text-align: center;
+          width: 25rem;
+          transition: all 0.3s ease-in-out;
+          i {
+            margin-right: 0.4rem;
+          }
+        }
+
+        .btn-1 {
+          background-color: var(--color-secondary);
+          color: #eaf6ff;
+        }
+
+        .btn-1:hover {
+          color: var(--color-secondary);
+          background-color: var(--color-white);
+          box-shadow: inset 0 0 0 2px var(--color-secondary);
+        }
+
+        .btn-2 {
+          color: var(--color-secondary);
+          background-color: transparent;
+          border: 2px solid var(--color-secondary);
+        }
+
+        .btn-2:hover {
+          color: var(--color-white);
+          border-color: var(--color-gray-2);
+        }
       }
     }
   }
 
   .back-shape {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--color-primary);
+    // width: 100%;
+    // height: 100vh;
+    background-color: transparent;
+    z-index: -10;
     .circles {
       position: absolute;
       top: 0;
@@ -463,53 +505,64 @@ section {
     }
   }
 
-  .timeline {
+  .timeline-container {
     display: flex;
-    flex-direction: column;
-    padding-bottom: 3rem;
-    margin-bottom: 8rem;
-    .timeline-item {
-      position: relative;
-      padding-left: 12rem;
-      border-left: 1px solid var(--color-gray-5);
-      margin-bottom: 2.8rem;
-      .ti-icon {
-        position: absolute;
-        left: 0;
-        top: 1.4rem;
-        background-color: var(--color-secondary);
-        width: 5rem;
-        height: 5rem;
-        border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    .timeline {
+      padding: 8rem;
+      .timeline-item {
+        margin: 4rem 0;
         display: flex;
         align-items: center;
-        justify-content: center;
-        i {
-          font-size: 1.8rem;
-          color: #eaf6ff;
+        .ti-icon {
+          width: 3.8rem;
+          height: 3.8rem;
+          margin-right: 2rem;
+          background-color: var(--color-secondary);
+          padding: 0.6rem;
+          border-radius: 50%;
+          i {
+            font-size: 2.4rem;
+            color: #d6d6d6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
         }
-      }
 
-      .ti-duration {
-        padding: 0.2rem 0.6rem;
-        background-color: var(--color-gray-5);
-        border-radius: 15px;
-        display: inline-block;
-        font-size: 0.8rem;
-        font-weight: 500;
-      }
-      h5 {
-        padding: 1rem 0;
-        font-size: 1.6rem;
-        font-weight: 700;
-        span {
-          color: var(--color-gray-2);
-          font-weight: 500;
-          font-size: 1.4rem;
+        .ti-content {
+          display: flex;
+          flex-direction: column;
+          justify-content: left;
+
+          .ti-duaration {
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 0.4rem;
+            border-radius: 9px;
+            width: 10rem;
+            background-color: var(--color-gray-4);
+            color: var(--color-white);
+            text-align: center;
+            margin-bottom: 0.6rem;
+          }
+
+          h5 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: var(--color-white);
+            margin-bottom: 0.6rem;
+            span {
+              font-weight: 400 !important;
+              color: var(--color-gray-2);
+            }
+          }
+
+          p {
+            font-size: 1.4rem;
+          }
         }
-      }
-      p {
-        color: var(--color-gray-2);
       }
     }
   }
@@ -553,7 +606,7 @@ section {
         display: flex;
         justify-content: left;
         align-items: center;
-        margin: 1rem;
+        margin: 0.5rem;
         .badge {
           font-size: 1rem;
           font-weight: 500;
@@ -568,6 +621,7 @@ section {
       .card-content {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         padding: 1.2rem;
         .project-name {
           font-size: 2.4rem;
@@ -686,6 +740,13 @@ section {
     font-size: 1.6rem;
     border: 0;
     border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .btn:hover {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px var(--color-secondary);
+    color: var(--color-secondary);
   }
 
   .btn:focus {
