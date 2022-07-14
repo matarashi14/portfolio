@@ -241,9 +241,9 @@ section {
 }
 .header .header-container .header-content .btn-header .btn {
   margin: 0 1rem;
+  padding: 0.4rem;
   font-size: 2.4rem;
   font-weight: 700;
-  padding: 0.8rem 0.4rem;
   border-radius: 9px;
   text-align: center;
   width: 25rem;
@@ -514,8 +514,11 @@ section {
   align-items: center;
 }
 .about .timeline-container .timeline .timeline-item .ti-icon {
-  width: 3.8rem;
-  height: 3.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
   margin-right: 2rem;
   background-color: var(--color-secondary);
   padding: 0.6rem;
@@ -524,14 +527,10 @@ section {
 .about .timeline-container .timeline .timeline-item .ti-icon i {
   font-size: 2.4rem;
   color: #d6d6d6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .about .timeline-container .timeline .timeline-item .ti-content {
   display: flex;
   flex-direction: column;
-  justify-content: left;
 }
 .about .timeline-container .timeline .timeline-item .ti-content .ti-duaration {
   font-size: 1rem;
@@ -839,22 +838,44 @@ section {
   section {
     padding: 3.2rem 6rem;
   }
+  .header .header-container .header-content {
+    width: 100%;
+    padding: 0;
+  }
   .header .header-container .header-content .btn-header {
     flex-direction: column;
   }
   .header .header-container .header-content .btn-header .btn {
-    margin: 1rem 0;
+    margin: 1.4rem 0;
     width: 100%;
   }
+  .about .about-container {
+    padding: 0 !important;
+  }
   .about .about-container .left-about {
-    padding: 2rem;
+    padding: 0;
   }
   .about .about-container .right-about .about-item {
-    height: 20rem;
-    width: 20rem;
+    height: 18rem;
+    width: 18rem;
   }
   .about .skill-icons .icons .icon {
     margin: 2.8rem;
+  }
+  .about .timeline-container {
+    padding: 4rem 0;
+  }
+  .about .timeline-container .timeline {
+    padding: 0;
+  }
+  .about .timeline-container .timeline .timeline-item {
+    padding: 0 !important;
+  }
+  .about .timeline-container .timeline .timeline-item .ti-content .ti-duaration {
+    margin-bottom: 0.2rem;
+  }
+  .about .timeline-container .timeline .timeline-item .ti-content h5 {
+    margin-bottom: 0.2rem;
   }
   .portfolio .portfolio-items {
     padding: 4rem 1rem;

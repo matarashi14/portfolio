@@ -76,10 +76,12 @@
   .header {
     .header-container {
       .header-content {
+        width: 100%;
+        padding: 0;
         .btn-header {
           flex-direction: column;
           .btn {
-            margin: 1rem 0;
+            margin: 1.4rem 0;
             width: 100%;
           }
         }
@@ -89,13 +91,14 @@
 
   .about {
     .about-container {
+      padding: 0 !important;
       .left-about {
-        padding: 2rem;
+        padding: 0;
       }
       .right-about {
         .about-item {
-          height: 20rem;
-          width: 20rem;
+          height: 18rem;
+          width: 18rem;
         }
       }
     }
@@ -104,6 +107,28 @@
       .icons {
         .icon {
           margin: 2.8rem;
+        }
+      }
+    }
+
+    .timeline-container {
+      padding: 4rem 0;
+      .timeline {
+        padding: 0;
+        .timeline-item {
+          padding: 0 !important;
+          .ti-icon {
+          }
+
+          .ti-content {
+            .ti-duaration {
+              margin-bottom: 0.2rem;
+            }
+
+            h5 {
+              margin-bottom: 0.2rem;
+            }
+          }
         }
       }
     }
