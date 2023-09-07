@@ -18,7 +18,7 @@ function pageTransitions() {
       let currentBtn = document.querySelectorAll(".active-btn");
       currentBtn[0].className = currentBtn[0].className.replace(
         "active-btn",
-        ""
+        "",
       );
       this.className += " active-btn";
     });
@@ -63,7 +63,7 @@ labels.forEach((label) => {
     .split("")
     .map(
       (letter, idx) =>
-        `<span style="transition-delay:${idx * 50}ms">${letter}</span>`
+        `<span style="transition-delay:${idx * 50}ms">${letter}</span>`,
     )
     .join("");
 });
